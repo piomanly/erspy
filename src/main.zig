@@ -73,10 +73,7 @@ const ArgumentsHandler = struct {
         };
     }
 
-    pub fn print(self: *const Self) ![]const u8 {
-        var list = std.ArrayList(u8).empty;
-        defer list.deinit();
-
+    pub fn print(self: *const Self) !void {
         const arguments_size = self.arguments.size();
         var argument_index: usize = 0;
 
